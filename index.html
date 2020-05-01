@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Polyverse</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
     <link href="css/styles.css" rel="stylesheet" />
   </head>
   <body>
@@ -12,48 +16,63 @@
       <div class="header">
         <div class="logo">Polyverse</div>
         <ul class="nav hide-mobile">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#start">Get Started</a></li>
+          <li><a href="#explore">The Adventure</a></li>
+          <li><a href="#create">The Dream</a></li>
         </ul>
         <img class="burger" src="images/burger.png" />
       </div>
 
       <img id="background" src="images/mountain.jpg" />
 
-      <div class="hero">
+      <div id="home" class="hero">
         <video id="snow" loop autoplay muted src="videos/snow.mp4"></video>
         <img id="foreground" src="images/foreground.png" />
         <h1>Welcome to Polyverse!</h1>
         <p>Dive into a world of endless creation.</p>
       </div>
-      <div class="container start">
+      <div id="start" class="container start">
         <div class="start-images">
           <img src="images/house.jpg" />
         </div>
         <div class="start-text">
           <h2>Start off small</h2>
-
-          <p>The Forest of Beginning...</p>
+          <p>
+            The Forest of Beginning... Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Minus magni dolorem beatae rem ad ipsam nihil
+            consectetur, maxime illum alias.
+          </p>
+          <button class="btn">Learn More</button>
         </div>
       </div>
-      <div class="container explore">
+      <div id="explore" class="container explore">
         <div class="explore-images">
           <img src="images/waterfall.jpg" />
         </div>
         <div class="explore-text">
           <h2>But explore...</h2>
-          <p>Falls of Eden...</p>
+          <p>
+            Falls of Eden... Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Minus magni dolorem beatae rem ad ipsam nihil consectetur,
+            maxime illum alias.
+          </p>
+          <button class="btn">Learn More</button>
         </div>
       </div>
-      <div class="container create">
+      <div id="create" class="container create">
         <div class="create-image">
           <img id="left" src="images/beach.jpg" />
           <img id="right" src="images/desert.jpg" />
         </div>
         <div class="create-text">
           <h2>And reach the unimaginable</h2>
-          <p>Pick up trading and make memories that last a life time</p>
+          <p>
+            Pick up trading and make memories that last a life time. Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Minus magni dolorem
+            beatae rem ad ipsam nihil consectetur, maxime illum alias.
+          </p>
+          <button class="btn">Learn More</button>
         </div>
       </div>
     </div>

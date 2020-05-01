@@ -1,11 +1,13 @@
 $primary-color: rgb(255, 255, 255);
 $shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
-
+$title: "Acme", sans-serif;
 * {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
 }
 #backdrop {
   width: 100%;
@@ -24,6 +26,9 @@ $shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
   z-index: 10;
   color: white;
   justify-content: space-between;
+  .logo {
+    font-family: $title;
+  }
   ul {
     position: fixed;
     right: 0;
@@ -36,7 +41,7 @@ $shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
         text-decoration: none;
         cursor: pointer;
         color: white;
-
+        font-family: $title;
         &:hover {
           color: grey;
         }
@@ -77,6 +82,10 @@ $shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
   justify-content: center;
   align-items: center;
   color: white;
+  text-shadow: 2px 2px black;
+  h1 {
+    font-family: $title;
+  }
   #foreground {
     position: absolute;
     width: 100%;
@@ -90,9 +99,12 @@ $shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
 
 .start,
 .explore {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   &-images {
     padding: 0 5vw;
-    height: 50vh;
+    height: 60%;
     img {
       height: 100%;
       width: 100%;
@@ -102,9 +114,12 @@ $shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
     }
   }
   &-text {
-    padding: 1em 0;
+    padding: 1em 5vw;
     color: $primary-color;
     text-align: center;
+    h2 {
+      font-family: $title;
+    }
   }
 }
 .start {
@@ -141,19 +156,37 @@ $shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
   }
   &-text {
     position: absolute;
-    width: 100%;
+    width: 90%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 1em 0;
     color: $primary-color;
     z-index: 1;
     text-align: center;
+    padding: 1em 5vw;
+    h2 {
+      font-family: $title;
+    }
   }
 }
 
 .hide-mobile {
   display: none;
+}
+
+.btn {
+  width: 50%;
+  border: none;
+  padding: 1em;
+  margin-top: 0.5em;
+  border-radius: 1em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: $shadow;
+  }
 }
 
 @media (min-width: 700px) {
@@ -168,7 +201,7 @@ $shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
     display: flex;
     margin: 0;
     position: static;
-    width: 50%;
+    width: 60%;
     justify-content: space-between;
     line-height: 1em;
   }
@@ -186,10 +219,10 @@ $shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
 @media (min-width: 1000px) {
   .start,
   .explore {
-    display: flex;
+    flex-direction: row;
     align-items: center;
-    &-images {
-      width: 60%;
+    &-text {
+      line-height: 1.5em;
     }
   }
   .create {
